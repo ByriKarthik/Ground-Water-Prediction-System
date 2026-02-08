@@ -1,0 +1,189 @@
+/* ==============================
+   Base Reset & Typography
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark {
+    background: linear-gradient(to right, #1e1e2f, #343a40);
+    color: #f1f1f1;
+}
+
+/* ==============================
+   Container
+============================== */
+.container {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    max-width: 520px;
+    width: 92%;
+    margin: 40px auto;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark .container {
+    background: #2e2e3e;
+}
+
+/* ==============================
+   Heading
+============================== */
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ==============================
+   Form Fields
+============================== */
+.input-group {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.25s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 6px rgba(79, 172, 254, 0.4);
+}
+
+body.dark .input-group input {
+    background: #3d3d4f;
+    color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+/* Dataset Range Text */
+.range {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 3px;
+}
+
+body.dark .range {
+    color: #bbb;
+}
+
+/* ==============================
+   Button
+============================== */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #00c6fb, #005bea);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ==============================
+   Result Box
+============================== */
+#result {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.4s ease;
+}
+
+body.dark #result {
+    background: #444;
+    color: #f1f1f1;
+}
+
+/* ==============================
+   Chart Canvas
+============================== */
+canvas {
+    margin-top: 18px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 6px;
+    transition: background 0.3s;
+}
+
+body.dark canvas {
+    background: #2e2e3e;
+}
+
+/* ==============================
+   Animations
+============================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   Responsive (Mobile Friendly)
+============================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
