@@ -72,7 +72,7 @@ Visualization (Chart.js)
 ---
 
 ## 📂 Project Structure
-
+```text
 MLPROJECT/
 │
 ├── app.py
@@ -95,8 +95,7 @@ MLPROJECT/
 │
 ├── templates/
 │ └── index.html
-
-
+```
 ---
 
 ## ▶️ Run Locally
